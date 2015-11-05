@@ -2,7 +2,8 @@
   "main": "src/index.js",
   "esnext": "lib/index.js",
   "scripts": {
-    "babel-node": "babel src --out-dir lib"
+    "babel-node": "babel ./src --out-dir ./lib",
+    "babel-node-watch": "babel ./src --out-dir ./lib --watch"
   },
   "dependencies": {
     "babel-cli": "^6.1.2"

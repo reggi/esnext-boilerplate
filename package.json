@@ -1,0 +1,11 @@
+{
+  "main": "src/index.js",
+  "esnext": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel src --out-dir lib"
+  },
+  "dependencies": {
+    "babel-cli": "^6.1.2"
+  }
+}

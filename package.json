@@ -3,9 +3,32 @@
   "esnext": "lib/index.js",
   "scripts": {
     "babel-node": "babel ./src --out-dir ./lib",
-    "babel-node-watch": "babel ./src --out-dir ./lib --watch"
+    "babel-node-watch": "babel ./src --out-dir ./lib --watch",
+    "babel-broswerify": "browserify ./src/index.js -o ./lib/index.js -t [ babelify ]",
+    "babel-broswerify-watch": "watchify ./src/index.js -o ./lib/index.js -t [ babelify ]"
   },
-  "dependencies": {
-    "babel-cli": "^6.1.2"
-  }
+  "devDependencies": {
+    "babel-cli": "^6.1.2",
+    "babel-plugin-syntax-async-functions": "^6.0.14",
+    "babel-plugin-transform-regenerator": "^6.0.18",
+    "babel-polyfill": "^6.0.16",
+    "babel-preset-es2015": "^6.1.2",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "watchify": "^3.6.0"
+  },
+  "name": "esnext-bootstrap",
+  "description": "```bash # clone this repo git clone https://github.com/reggi/esnext-boilerplate.git # cd into the downloaded repo cd esnext-boilerplate # install babel (locally) npm install # use this to watch the src dir npm run babel-node-watch # or just run babel with npm run babel-node ```",
+  "version": "1.0.0",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reggi/esnext-bootstrap.git"
+  },
+  "author": "Thomas Reggi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reggi/esnext-bootstrap/issues"
+  },
+  "homepage": "https://github.com/reggi/esnext-bootstrap#readme"
 }

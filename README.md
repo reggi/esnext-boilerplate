@@ -12,3 +12,22 @@ npm run babel-node-watch
 # or just run babel with
 npm run babel-node
 ```
+
+# Async / Await
+
+Below is an example using `async` and `await`. You have to make sure the dependency `"babel-polyfill"` is included.
+
+```js
+import "babel-polyfill"
+
+async function five() {
+  return 5
+}
+
+async function helloWorld() {
+  var numb = await five()
+  console.log(numb)
+}
+
+helloWorld() // logs `5`
+```
